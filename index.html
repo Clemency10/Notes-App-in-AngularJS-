@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Using Angular</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+            <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Muli">
+        <script src="angular.js"></script>
+        <script src="angular-animate.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body ng-controller="MyCtrl">
+      <div class="container">
+         <div class="title">
+          <div class="mainTitle"><h2 style="
+    margin: 5px 0 0 0;
+">Notes</h2></div>
+          <div class="actionbtn"><button class="bigbtn" ng-click="addNote()"><img src="img/plus.svg" class="svg">Add Note</button></div>
+          
+      </div>
+        <div>
+            <div class="note animate-repeat" ng-repeat="i in Note">
+                <div class="header">
+                    <input type="text" class="header" placeholder="{{Title}}">
+                </div>
+               
+                <div class="content">
+                    <textarea>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+                </div>
+               
+                <div class="footer">
+                    <button ng-click="deleteNote($index)">Remove</button>
+                </div>
+            </div>
+        </div>
+        
+       </div> 
+        
+        
+        
+    </body>
+</html>
